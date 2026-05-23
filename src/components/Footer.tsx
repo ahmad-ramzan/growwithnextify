@@ -51,7 +51,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-2">
             {/* Logo */}
-            <a href="#" className="inline-flex items-center mb-5 bg-white/5 rounded-xl p-3 border border-white/10">
+            <a href="/" className="inline-flex items-center mb-5 bg-white/5 rounded-xl p-3 border border-white/10">
               <img src="/logo.png" alt="Company Logo" className="h-24 w-auto object-contain brightness-0 invert" style={{ filter: "brightness(0) invert(1)" }} />
             </a>
 
@@ -125,13 +125,16 @@ export default function Footer() {
             &copy; {year} GrowWithNextify. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((l) => (
+            {[
+              { label: "Privacy Policy", href: "/privacy-policy" },
+              { label: "Terms of Service", href: "/terms-of-service" },
+            ].map((l) => (
               <a
-                key={l}
-                href="#"
+                key={l.label}
+                href={l.href}
                 className="text-xs text-gray-500 hover:text-gray-300 transition-colors duration-150"
               >
-                {l}
+                {l.label}
               </a>
             ))}
           </div>
