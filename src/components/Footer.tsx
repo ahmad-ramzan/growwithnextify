@@ -12,26 +12,32 @@ const InstagramIcon = () => (
   </svg>
 );
 
-const FacebookIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M24 12c0-6.63-5.37-12-12-12S0 5.37 0 12c0 5.99 4.39 10.95 10.13 11.85V15.47H7.08V12h3.05V9.36c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.68.23 2.68.23v2.95h-1.51c-1.49 0-1.95.93-1.95 1.88V12h3.32l-.53 3.47h-2.79v8.38C19.61 22.95 24 17.99 24 12z" />
-  </svg>
-);
-
 const footerLinks = {
   Services: ["SEO Optimization", "AEO / AI Search", "Performance Marketing", "Competitor Analysis"],
 };
 
 const contact = [
-  { icon: <Mail size={14} />, text: "hello@nextify.com" },
-  { icon: <Phone size={14} />, text: "+1 (800) 123-4567" },
-  { icon: <MapPin size={14} />, text: "New York, NY · Remote Worldwide" },
+  { icon: <Mail size={14} />, text: "sal@growwithnextify.com", href: "mailto:sal@growwithnextify.com" },
+  { icon: <Phone size={14} />, text: "UAE: +971 56 562 9496", href: "tel:+971565629496" },
+  { icon: <Phone size={14} />, text: "PAK: +92 301 9651202", href: "tel:+923019651202" },
+  {
+    icon: <MapPin size={14} />,
+    text: "Laal Building, Frij Al Murar, Deira, Dubai, UAE",
+    href: "https://www.google.com/maps/search/?api=1&query=Laal+Building+Frij+Al+Murar+Deira+Dubai+UAE",
+  },
 ];
 
 const socials = [
-  { label: "LinkedIn", icon: <LinkedInIcon />, href: "#" },
-  { label: "Instagram", icon: <InstagramIcon />, href: "#" },
-  { label: "Facebook", icon: <FacebookIcon />, href: "#" },
+  {
+    label: "LinkedIn",
+    icon: <LinkedInIcon />,
+    href: "https://www.linkedin.com/company/growwithnextify-com/",
+  },
+  {
+    label: "Instagram",
+    icon: <InstagramIcon />,
+    href: "https://www.instagram.com/growwithnextify",
+  },
 ];
 
 export default function Footer() {
@@ -74,17 +80,19 @@ export default function Footer() {
             </div>
           ))}
 
-          {/* Contact column (replaces Resources) */}
+          {/* Contact column */}
           <div className="lg:col-span-2">
             <p className="text-white font-bold text-sm mb-5">Contact</p>
             <ul className="flex flex-col gap-3">
               {contact.map((c) => (
-                <li
-                  key={c.text}
-                  className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[var(--brand-primary)] transition-colors cursor-pointer"
-                >
-                  <span style={{ color: "var(--brand-primary)" }}>{c.icon}</span>
-                  {c.text}
+                <li key={c.text}>
+                  <a
+                    href={c.href}
+                    className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[var(--brand-primary)] transition-colors"
+                  >
+                    <span style={{ color: "var(--brand-primary)" }}>{c.icon}</span>
+                    {c.text}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -98,6 +106,8 @@ export default function Footer() {
                 <a
                   key={s.label}
                   href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2.5 px-4 py-2 rounded-lg text-xs font-semibold text-gray-300 hover:text-[var(--brand-primary)] transition-colors duration-150 border border-white/10 hover:border-white/30"
                   style={{ background: "rgba(255,255,255,0.03)" }}
                 >
@@ -112,7 +122,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-8 border-t border-white/10">
           <p className="text-xs text-gray-500">
-            &copy; {year} Nextify. All rights reserved.
+            &copy; {year} GrowWithNextify. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((l) => (
