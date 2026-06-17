@@ -47,7 +47,12 @@ export default function CTASection() {
           transition={{ delay: 0.18 }}
           className="mt-8"
         >
-          <a href="#" className="btn-primary">
+          <a
+            href="https://calendly.com/sal-growwithnextify/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
             Book Free Strategy Call
             <ArrowRight size={16} />
           </a>

@@ -31,7 +31,14 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden md:flex items-center gap-4">
-          <a href="/requirements" className="btn-primary">Book a Call</a>
+          <a
+            href="https://calendly.com/sal-growwithnextify/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            Book a Call
+          </a>
         </div>
 
         <button onClick={() => setOpen(!open)} className="md:hidden text-gray-600 link-hover">
@@ -44,7 +51,15 @@ export default function Navbar() {
           <a href="/#services" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Services</a>
           <a href="/#results" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Results</a>
           <a href="/#reviews" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Reviews</a>
-          <a href="/requirements" onClick={() => setOpen(false)} className="btn-primary mt-4 justify-center">Book a Call</a>
+          <a
+            href="https://calendly.com/sal-growwithnextify/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="btn-primary mt-4 justify-center"
+          >
+            Book a Call
+          </a>
         </div>
       )}
     </header>
