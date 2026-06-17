@@ -18,7 +18,7 @@ const reviews = [
     role: "Marketing Director",
     company: "",
     avatar: "FS",
-    avatarStyle: { background: "linear-gradient(135deg, #2DB840, #1D9830)" },
+    avatarStyle: { background: "linear-gradient(135deg, #196d24, #125018)" },
     rating: 5,
     text: "Their SEO and AI search strategy helped us outrank direct competitors and significantly reduce ad costs. Data-driven, transparent — we always knew exactly what was happening.",
   },
@@ -36,7 +36,7 @@ const reviews = [
     role: "E-Commerce Director",
     company: "",
     avatar: "BJ",
-    avatarStyle: { background: "linear-gradient(135deg, #2DB840, #4DCF60)" },
+    avatarStyle: { background: "linear-gradient(135deg, #196d24, #196d24)" },
     rating: 5,
     text: "Went from invisible on Google to ranking for 200+ keywords in 4 months. ROAS on paid ads improved by 5x. The holistic SEO + paid approach is what sets them apart.",
   },
@@ -87,7 +87,7 @@ export default function ReviewsSection() {
               className="card p-7 flex flex-col gap-4 w-[360px] shrink-0"
             >
               {/* Quote icon */}
-              <Quote size={26} style={{ color: "rgba(45,184,64,0.35)" }} />
+              <Quote size={26} style={{ color: "rgba(25,109,36,0.35)" }} />
 
               {/* Review text */}
               <p className="text-gray-500 text-sm leading-relaxed flex-1">

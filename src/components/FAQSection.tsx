@@ -30,9 +30,9 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
       transition={{ duration: 0.4, delay: index * 0.06 }}
       className="bg-white rounded-2xl overflow-hidden transition-all duration-200"
       style={{
-        border: open ? "1.5px solid rgba(45,184,64,0.30)" : "1px solid #E2E8F0",
+        border: open ? "1.5px solid rgba(25,109,36,0.30)" : "1px solid #E2E8F0",
         boxShadow: open
-          ? "0 4px 20px rgba(45,184,64,0.08)"
+          ? "0 4px 20px rgba(25,109,36,0.08)"
           : "0 1px 3px rgba(0,0,0,0.06)",
       }}
     >
@@ -44,7 +44,7 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
         <span
           className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200"
           style={open
-            ? { background: "linear-gradient(135deg, #2DB840, #1D9830)", color: "white" }
+            ? { background: "linear-gradient(135deg, #196d24, #125018)", color: "white" }
             : { background: "#F1F5F9", color: "#64748B" }
           }
         >

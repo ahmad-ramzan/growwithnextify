@@ -13,7 +13,7 @@ export default function CTASection() {
       {/* Brand gradient top line */}
       <div
         className="absolute top-0 left-0 right-0 h-1"
-        style={{ background: "linear-gradient(90deg, #4472C4, #2DB840)" }}
+        style={{ background: "linear-gradient(90deg, #4472C4, #196d24)" }}
       />
 
       <div className="max-w-3xl mx-auto text-center">
@@ -24,7 +24,7 @@ export default function CTASection() {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight"
         >
-          Ready to Grow Your <span style={{ color: "#4DCF60" }}>Business?</span>
+          Ready to Grow Your <span style={{ color: "#196d24" }}>Business?</span>
         </motion.h2>
 
         {/* Subhead */}

@@ -19,9 +19,9 @@ const services = [
     tag: "AEO",
     title: "AI Search Optimization",
     benefits: ["Appear in AI Overviews", "ChatGPT citations", "Voice search visibility", "Featured answer placement"],
-    iconStyle: { background: "rgba(45,184,64,0.10)", color: "#1D9830" },
-    tagStyle: { background: "rgba(45,184,64,0.10)", color: "#1D9830", border: "1px solid rgba(45,184,64,0.22)" },
-    dot: "#2DB840",
+    iconStyle: { background: "rgba(25,109,36,0.10)", color: "#125018" },
+    tagStyle: { background: "rgba(25,109,36,0.10)", color: "#125018", border: "1px solid rgba(25,109,36,0.22)" },
+    dot: "#196d24",
     featured: true,
   },
   {
@@ -72,16 +72,16 @@ export default function SolutionSection() {
             <motion.div
               key={s.title}
               variants={itemVariants}
-              className={`relative card p-8 flex flex-col gap-6 ${s.featured ? "outline outline-2 outline-offset-2 outline-[#2DB840]" : ""}`}
-              style={s.featured ? { boxShadow: "0 12px 40px rgba(45,184,64,0.12), 0 4px 12px rgba(0,0,0,0.06)" } : undefined}
+              className={`relative card p-8 flex flex-col gap-6 ${s.featured ? "outline outline-2 outline-offset-2 outline-[#196d24]" : ""}`}
+              style={s.featured ? { boxShadow: "0 12px 40px rgba(25,109,36,0.12), 0 4px 12px rgba(0,0,0,0.06)" } : undefined}
             >
               {/* Featured badge */}
               {s.featured && (
                 <div
-                  className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full text-gray-900 text-xs font-bold tracking-wide whitespace-nowrap"
+                  className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full text-white text-xs font-bold tracking-wide whitespace-nowrap"
                   style={{
-                    background: "linear-gradient(135deg, #2DB840, #1D9830)",
-                    boxShadow: "0 4px 14px rgba(45,184,64,0.30)",
+                    background: "linear-gradient(135deg, #196d24, #125018)",
+                    boxShadow: "0 4px 14px rgba(25,109,36,0.30)",
                   }}
                 >
                   Most Popular
