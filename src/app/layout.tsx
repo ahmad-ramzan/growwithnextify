@@ -17,6 +17,12 @@ export const metadata: Metadata = {
     title: "GrowWithNextify — SEO, AEO & Performance Marketing",
     description: "Grow your business with SEO, AI Search Optimization, and performance-driven marketing.",
     type: "website",
+    images: ["/fav-icon.png"],
+  },
+  icons: {
+    icon: "/fav-icon.png",
+    shortcut: "/fav-icon.png",
+    apple: "/fav-icon.png",
   },
 };
 
