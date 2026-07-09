@@ -1,62 +1,78 @@
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import {
+  ArrowUpRight,
+  Search,
+  Globe,
+  FileText,
+  BarChart2,
+  Headphones,
+  Share2,
+  Bot,
+  Phone,
+  ChevronRight
+} from "lucide-react";
 
 export default function HeroSection() {
+  const pills = [
+    { name: "Outbound", icon: ArrowUpRight },
+    { name: "Inbound", icon: Search },
+    { name: "SEO · AEO · GEO", icon: Globe },
+    { name: "Content Automation", icon: FileText },
+    { name: "Ads", icon: BarChart2 },
+    { name: "Customer Support", icon: Headphones },
+    { name: "Back Office", icon: Share2 },
+    { name: "AI Agents", icon: Bot },
+  ];
+
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center items-center px-6 text-center pt-40 md:pt-20">
+    <section className="relative min-h-[90vh] flex flex-col justify-center items-center px-6 text-center pt-40 md:pt-20 bg-[var(--bg-primary)]">
       <div className="absolute inset-0 max-w-3xl mx-auto opacity-10 pointer-events-none">
-        {/* Removed gradient for pure minimalism */}
+        {/* Background elements if any */}
       </div>
 
-      <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
-        <span className="section-label mb-6">
-          Clarity & Vision
-        </span>
+      <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
+        {/* Top Badge */}
+        <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--border)] bg-white mb-4 shadow-sm">
+          <div className="w-2 h-2 rounded-full bg-[var(--brand-primary)]"></div>
+          <span className="text-sm text-[var(--text-secondary)] font-medium">Trusted by 20+ companies worldwide</span>
+        </div>
 
-        <h1 className="text-4xl md:text-5xl font-light tracking-tight text-gray-900 leading-[1.1] mb-8">
-          Grow Your Business with <br className="hidden md:block" />
-          <strong style={{ color: "var(--brand-primary)" }} className="font-bold">AEO, SEO & Performance Marketing</strong>
+        {/* Heading */}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] leading-tight mb-6 tracking-tight">
+          Building Solutions That Drive Business Growth
         </h1>
 
-        <p className="text-lg text-gray-500 font-light max-w-2xl leading-relaxed mb-6">
-          We help businesses generate qualified leads through:
+        {/* Subheading */}
+        <p className="text-xl md:text-2xl text-[var(--text-secondary)] font-light max-w-2xl leading-relaxed mb-5 text-center">
+          Custom software, automation, and digital experiences tailored to your business.
         </p>
 
-        <ul className="flex flex-wrap justify-center gap-x-6 gap-y-3 max-w-2xl mb-12">
-          {[
-            "SEO",
-            "AI Search Optimization (AEO)",
-            "Paid Ads",
-            "Conversion-focused marketing systems",
-          ].map((item) => (
-            <li
-              key={item}
-              className="flex items-center gap-2 text-base text-gray-700 font-medium"
-            >
-              <CheckCircle2 size={18} style={{ color: "var(--brand-primary)" }} />
-              {item}
-            </li>
-          ))}
-        </ul>
-
-        <div className="flex flex-col sm:flex-row items-center gap-4">
-          <a
-            href="https://calendly.com/sal-growwithnextify/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            Book Free Strategy Call
-            <ArrowRight size={16} />
-          </a>
-          <a
-            href="https://calendly.com/sal-growwithnextify/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-ghost"
-          >
-            Get Free Competitor Growth Report
-          </a>
+        {/* Pills */}
+        <div className="flex flex-wrap justify-center gap-3 max-w-4xl mb-6">
+          {pills.map((pill, index) => {
+            const Icon = pill.icon;
+            return (
+              <div
+                key={index}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[var(--border)] bg-white shadow-sm text-sm font-medium text-[var(--text-secondary)] hover:border-gray-300 transition-colors"
+              >
+                <Icon size={16} className="text-[var(--brand-secondary)] opacity-70" />
+                {pill.name}
+              </div>
+            );
+          })}
         </div>
+
+        {/* CTA Button */}
+        <a
+          href="https://calendly.com/sal-growwithnextify/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 px-8 py-4 rounded-full bg-[var(--brand-primary)] hover:bg-[var(--brand-primary-alt)] text-white font-medium text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+        >
+          <Phone size={20} className="text-white/80" />
+          Book a Consultation Call
+          <ChevronRight size={20} className="text-white/80" />
+        </a>
       </div>
     </section>
   );

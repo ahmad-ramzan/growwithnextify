@@ -8,11 +8,13 @@
   --text-muted: #9ca3af;
   --border: #e5e7eb;
 
-  /* New Brand Colors */
-  --brand-primary: #196d24;
-  --brand-primary-alt: #125018;
-  --brand-secondary: #1E5D99;
-  --brand-secondary-alt: #215F9A;
+  /* Brand Colors (From Logo) */
+  --brand-primary: #1d9c39;
+  /* Growth Green */
+  --brand-primary-alt: #167a2c;
+  --brand-secondary: #1e5d99;
+  /* Professional Blue */
+  --brand-secondary-alt: #164673;
 }
 
 @theme inline {
@@ -42,7 +44,7 @@ body {
   color: #fff;
 }
 
-/* Primary Button - Growth Green */
+/* Primary Button */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -55,13 +57,13 @@ body {
   background: var(--brand-primary);
   transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
   border: none;
-  box-shadow: 0 4px 12px rgba(25, 109, 36, 0.2);
+  box-shadow: 0 4px 12px rgba(29, 156, 57, 0.3);
 }
 
 .btn-primary:hover {
   background: var(--brand-primary-alt);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(25, 109, 36, 0.3);
+  box-shadow: 0 6px 16px rgba(29, 156, 57, 0.4);
 }
 
 /* Secondary Button - Deep Professional Blue */
@@ -118,9 +120,9 @@ body {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: rgba(25, 109, 36, 0.1);
+  background: rgba(29, 156, 57, 0.1);
   color: var(--brand-primary);
-  border: 1px solid rgba(25, 109, 36, 0.2);
+  border: 1px solid rgba(29, 156, 57, 0.2);
 }
 
 /* Hover Links */

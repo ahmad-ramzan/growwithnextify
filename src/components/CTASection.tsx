@@ -1,30 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { Phone } from "lucide-react";
 
 export default function CTASection() {
   return (
     <section
       id="cta"
-      className="relative py-24 px-6"
-      style={{ background: "linear-gradient(135deg, #0F172A 0%, #1E3A5F 50%, #0F2A1A 100%)" }}
+      className="relative py-24 px-6 bg-white"
     >
-      {/* Brand gradient top line */}
-      <div
-        className="absolute top-0 left-0 right-0 h-1"
-        style={{ background: "linear-gradient(90deg, #4472C4, #196d24)" }}
-      />
-
       <div className="max-w-3xl mx-auto text-center">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight"
+          className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight"
         >
-          Ready to Grow Your <span style={{ color: "#196d24" }}>Business?</span>
+          Ready to Grow Your Business?
         </motion.h2>
 
         {/* Subhead */}
@@ -33,10 +26,9 @@ export default function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="mt-5 text-lg leading-relaxed max-w-xl mx-auto"
-          style={{ color: "rgba(255,255,255,0.65)" }}
+          className="mt-6 text-lg leading-relaxed max-w-2xl mx-auto text-gray-500 font-light"
         >
-          Book a free strategy call and start growing today.
+          Most clients keep us on after launch as their ongoing AI partner. Monthly strategy sessions, evolving systems, and continued support as the business grows.
         </motion.p>
 
         {/* CTA Button */}
@@ -45,7 +37,7 @@ export default function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.18 }}
-          className="mt-8"
+          className="mt-8 flex justify-center"
         >
           <a
             href="https://calendly.com/sal-growwithnextify/30min"
@@ -53,8 +45,7 @@ export default function CTASection() {
             rel="noopener noreferrer"
             className="btn-primary"
           >
-            Book Free Strategy Call
-            <ArrowRight size={16} />
+            Book a Free Call
           </a>
         </motion.div>
       </div>

@@ -1,8 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import LogoSlider from "@/components/LogoSlider";
-import ProblemSection from "@/components/ProblemSection";
-import SolutionSection from "@/components/SolutionSection";
 import ResultsSection from "@/components/ResultsSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import FAQSection from "@/components/FAQSection";
@@ -18,8 +16,6 @@ export default function Home() {
         <LogoSlider />
         <ResultsSection />
         <ReviewsSection />
-        <ProblemSection />
-        <SolutionSection />
         <FAQSection />
         <CTASection />
       </main>
