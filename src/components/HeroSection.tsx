@@ -33,16 +33,16 @@ export default function HeroSection() {
         {/* Top Badge */}
         <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--border)] bg-white mb-4 shadow-sm">
           <div className="w-2 h-2 rounded-full bg-[var(--brand-primary)]"></div>
-          <span className="text-sm text-[var(--text-secondary)] font-medium">Trusted by 20+ companies worldwide</span>
+          <span className="text-xs text-[var(--text-secondary)] font-medium">Trusted by 20+ companies worldwide</span>
         </div>
 
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] leading-tight mb-6 tracking-tight">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] leading-tight mb-6 tracking-tight">
           Building Solutions That Drive Business Growth
         </h1>
 
         {/* Subheading */}
-        <p className="text-xl md:text-2xl text-[var(--text-secondary)] font-light max-w-2xl leading-relaxed mb-5 text-center">
+        <p className="text-lg md:text-xl text-[var(--text-secondary)] font-light max-w-2xl leading-relaxed mb-5 text-center">
           Custom software, automation, and digital experiences tailored to your business.
         </p>
 
@@ -53,7 +53,7 @@ export default function HeroSection() {
             return (
               <div
                 key={index}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[var(--border)] bg-white shadow-sm text-sm font-medium text-[var(--text-secondary)] hover:border-gray-300 transition-colors"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[var(--border)] bg-white shadow-sm text-xs font-medium text-[var(--text-secondary)] hover:border-gray-300 transition-colors"
               >
                 <Icon size={16} className="text-[var(--brand-secondary)] opacity-70" />
                 {pill.name}
@@ -67,7 +67,7 @@ export default function HeroSection() {
           href="https://calendly.com/sal-growwithnextify/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 px-8 py-4 rounded-full bg-[var(--brand-primary)] hover:bg-[var(--brand-primary-alt)] text-white font-medium text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+          className="flex items-center gap-3 px-8 py-4 rounded-full bg-[var(--brand-primary)] hover:bg-[var(--brand-primary-alt)] text-white font-medium text-base transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
         >
           <Phone size={20} className="text-white/80" />
           Book a Consultation Call

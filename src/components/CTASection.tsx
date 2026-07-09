@@ -15,7 +15,7 @@ export default function CTASection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight"
+          className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight"
         >
           Ready to Grow Your Business?
         </motion.h2>
