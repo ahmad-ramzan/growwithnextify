@@ -55,7 +55,7 @@ export default function LogoSlider() {
           100% { transform: translateX(-50%); }
         }
         :global(.animate-logo-scroll) {
-          animation: logoScroll 60s linear infinite;
+          animation: logoScroll 30s linear infinite;
         }
         :global(.animate-logo-scroll:hover) {
           animation-play-state: paused;
