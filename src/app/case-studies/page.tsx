@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import AvatarGuide from "@/components/AvatarGuide";
-import ResultsSection from "@/components/ResultsSection";
 import { ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -18,13 +17,15 @@ export default function CaseStudiesPage() {
       <main className="pt-24 bg-white">
         {/* Hero Section */}
         <section 
-          className="relative py-20 px-6 max-w-5xl mx-auto text-center"
+          className="relative py-24 px-6 max-w-5xl mx-auto text-center"
           data-avatar-section
           data-avatar-message="Don't just take our word for it—look at the numbers!"
           data-avatar-side="right"
         >
-          <div className="inline-block px-4 py-1.5 bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] rounded-full text-xs font-bold mb-5 border border-[var(--brand-primary)]/20 shadow-sm">Client Success</div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Real Numbers, Real Growth</h1>
+          <span className="inline-block px-4 py-1.5 bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] rounded-full text-xs font-bold mb-5 border border-[var(--brand-primary)]/20 shadow-sm uppercase tracking-wider">
+            Case Studies
+          </span>
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">Real Numbers, Real Growth</h1>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
             Explore how we've partnered with ambitious brands to re-architect their digital presence and exponentially scale their revenue.
           </p>
@@ -134,16 +135,6 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        {/* Image Gallery from ResultsSection */}
-        <div className="py-12 bg-gray-50 border-t border-gray-100">
-          <div className="max-w-7xl mx-auto px-6 text-center mb-4">
-             <h2 className="text-2xl font-bold text-gray-900">More Client Wins</h2>
-             <p className="text-gray-500 mt-2">A snapshot of the dashboards and rankings we've achieved for our partners.</p>
-          </div>
-          {/* We reuse the existing ResultsSection component, but it already has its own padding and titles. 
-              Let's just render it. Note: ResultsSection has its own H2. */}
-        </div>
-        <ResultsSection />
 
         <CTASection />
       </main>

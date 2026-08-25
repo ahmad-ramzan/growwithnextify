@@ -99,11 +99,11 @@ export default function AvatarGuide() {
         setMessage(msg);
         setIsVisible(!!msg);
         setIsMoving(false);
-        
+
         // Restore the initial pop-in movement!
         if (!prefersReducedMotion && avatarRef.current) {
-          gsap.fromTo(avatarRef.current, 
-            { y: 30, opacity: 0 }, 
+          gsap.fromTo(avatarRef.current,
+            { y: 30, opacity: 0 },
             { y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.5)", overwrite: "auto" }
           );
         }

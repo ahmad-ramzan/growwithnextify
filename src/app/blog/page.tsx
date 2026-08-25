@@ -71,18 +71,18 @@ export default function BlogPage() {
       <main className="pt-24 bg-gray-50 min-h-screen">
         {/* Hero Section */}
         <section 
-          className="relative py-24 px-6 max-w-7xl mx-auto"
+          className="relative py-24 px-6 max-w-5xl mx-auto text-center"
           data-avatar-section
           data-avatar-message="Welcome to the blog! We share all our growth secrets here."
           data-avatar-side="right"
         >
-          <div className="max-w-3xl">
-            <span className="inline-block px-4 py-1.5 bg-gray-200 text-gray-700 rounded-full text-xs font-bold mb-5 tracking-wider uppercase">Grow With Nextify Blog</span>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">Insights on <span className="text-[var(--brand-primary)]">Digital Growth</span> & Technology</h1>
-            <p className="text-lg text-gray-600">
-              Practical, technical perspectives on Next.js development, AI Search Optimization, lead generation, and scaling revenue.
-            </p>
-          </div>
+          <span className="inline-block px-4 py-1.5 bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] rounded-full text-xs font-bold mb-5 border border-[var(--brand-primary)]/20 shadow-sm uppercase tracking-wider">
+            Blog
+          </span>
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">Insights on <span className="text-[var(--brand-primary)]">Digital Growth</span> & Technology</h1>
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+            Practical, technical perspectives on Next.js development, AI Search Optimization, lead generation, and scaling revenue.
+          </p>
         </section>
 
         {/* Category Filters */}

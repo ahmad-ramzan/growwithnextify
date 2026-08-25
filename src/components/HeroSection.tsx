@@ -8,11 +8,19 @@ import {
   Share2,
   Bot,
   Phone,
-  ChevronRight
+  ChevronRight,
+  Code,
+  Smartphone,
+  Megaphone,
+  ShoppingCart
 } from "lucide-react";
 
 export default function HeroSection() {
   const pills = [
+    { name: "Web Development", icon: Code },
+    { name: "App Development", icon: Smartphone },
+    { name: "Marketing Services", icon: Megaphone },
+    { name: "E-Commerce", icon: ShoppingCart },
     { name: "Outbound", icon: ArrowUpRight },
     { name: "Inbound", icon: Search },
     { name: "SEO · AEO · GEO", icon: Globe },
