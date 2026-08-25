@@ -28,9 +28,9 @@ export default function Navbar() {
         {/* Centered links — absolute so they're dead center regardless of logo/CTA width */}
         <ul className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           <li><Link href="/" className="text-sm font-medium text-gray-600 link-hover">Home</Link></li>
-          <li><Link href="/#services" className="text-sm font-medium text-gray-600 link-hover">Services</Link></li>
-          <li><Link href="/#results" className="text-sm font-medium text-gray-600 link-hover">Case Studies</Link></li>
-          <li><Link href="/#offers" className="text-sm font-medium text-gray-600 link-hover">Offers</Link></li>
+          <li><Link href="/services" className="text-sm font-medium text-gray-600 link-hover">Services</Link></li>
+          <li><Link href="/case-studies" className="text-sm font-medium text-gray-600 link-hover">Case Studies</Link></li>
+          <li><Link href="/offers" className="text-sm font-medium text-gray-600 link-hover">Offers</Link></li>
           <li><Link href="/blog" className="text-sm font-medium text-gray-600 link-hover">Blog</Link></li>
         </ul>
 
@@ -51,9 +51,9 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden bg-white border-t border-gray-100 px-6 py-6 flex flex-col gap-4">
           <Link href="/" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Home</Link>
-          <Link href="/#services" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Services</Link>
-          <Link href="/#results" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Case Studies</Link>
-          <Link href="/#offers" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Offers</Link>
+          <Link href="/services" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Services</Link>
+          <Link href="/case-studies" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Case Studies</Link>
+          <Link href="/offers" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Offers</Link>
           <Link href="/blog" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Blog</Link>
           <Link
             href="/#contact"
