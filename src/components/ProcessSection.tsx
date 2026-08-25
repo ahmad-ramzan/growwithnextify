@@ -39,7 +39,7 @@ export default function ProcessSection() {
       className="py-24 px-6 bg-white"
       data-avatar-section
       data-avatar-message="Here is exactly how we take you from idea to launch!"
-      data-avatar-side="left"
+      data-avatar-side="right"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-900 mb-20 tracking-tight">
