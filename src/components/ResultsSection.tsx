@@ -14,7 +14,13 @@ export default function ResultsSection() {
   const displayedImages = showAll ? resultImages : resultImages.slice(0, 6);
 
   return (
-    <section id="results" className="relative py-24 bg-gray-50 border-y border-gray-100">
+    <section 
+      id="results" 
+      className="relative py-24 bg-gray-50 border-y border-gray-100"
+      data-avatar-section
+      data-avatar-message="These are the real numbers behind our work."
+      data-avatar-side="right"
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16 text-center">
           <motion.h2

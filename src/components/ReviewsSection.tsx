@@ -50,7 +50,13 @@ export default function ReviewsSection() {
   const loop = [...reviews, ...reviews];
 
   return (
-    <section id="reviews" className="relative py-12 bg-[#fafcff] overflow-hidden">
+    <section 
+      id="reviews" 
+      className="relative py-12 bg-[#fafcff] overflow-hidden"
+      data-avatar-section
+      data-avatar-message="Don't just take our word for it—see what our clients say."
+      data-avatar-side="right"
+    >
       <div className="max-w-7xl mx-auto px-6 mb-12 text-center">
 
 

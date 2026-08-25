@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
-
+import Link from "next/link";
+import Image from "next/image";
 const LinkedInIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8 19H5V8h3v11zM6.5 6.73c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.76-1.75 1.76zM20 19h-3v-5.6c0-3.37-4-3.12-4 0V19h-3V8h3v1.76c1.4-2.58 7-2.77 7 2.47V19z" />
@@ -53,13 +54,15 @@ export default function Footer() {
           
           {/* Brand & CTA Column */}
           <div className="lg:col-span-4 flex flex-col items-start">
-            <a href="/" className="inline-block mb-8 transition-transform hover:scale-105 duration-300">
-              <img 
+            <Link href="/" className="inline-block mb-8 transition-transform hover:scale-105 duration-300">
+              <Image 
                 src="/logo.png" 
                 alt="GrowWithNextify" 
+                width={200}
+                height={80}
                 className="h-20 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity" 
               />
-            </a>
+            </Link>
             <p className="text-[#8c9fba] text-[15px] leading-relaxed mb-8 max-w-sm font-light">
               We engineer scalable growth through SEO, AI Search Optimization, and data-driven performance marketing. Your dedicated partner for modern digital dominance.
             </p>
@@ -133,12 +136,12 @@ export default function Footer() {
             &copy; {year} GrowWithNextify. All rights reserved.
           </p>
           <div className="flex items-center gap-8">
-            <a href="/privacy-policy" className="text-[14px] text-[#6b7b93] hover:text-white transition-colors duration-200 font-light">
+            <Link href="/privacy-policy" className="text-[14px] text-[#6b7b93] hover:text-white transition-colors duration-200 font-light">
               Privacy Policy
-            </a>
-            <a href="/terms-of-service" className="text-[14px] text-[#6b7b93] hover:text-white transition-colors duration-200 font-light">
+            </Link>
+            <Link href="/terms-of-service" className="text-[14px] text-[#6b7b93] hover:text-white transition-colors duration-200 font-light">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

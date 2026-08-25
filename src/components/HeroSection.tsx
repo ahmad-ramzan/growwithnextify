@@ -24,7 +24,12 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center items-center px-6 text-center pt-40 md:pt-20 bg-[var(--bg-primary)]">
+    <section 
+      className="relative min-h-[90vh] flex flex-col justify-center items-center px-6 text-center pt-40 md:pt-20 bg-[var(--bg-primary)]"
+      data-avatar-section
+      data-avatar-message="Hi! Let me show you around our services."
+      data-avatar-side="right"
+    >
       <div className="absolute inset-0 max-w-3xl mx-auto opacity-10 pointer-events-none">
         {/* Background elements if any */}
       </div>

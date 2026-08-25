@@ -30,7 +30,7 @@ export default function ProblemSection() {
           viewport={{ once: true }}
           className="flex justify-center mb-5"
         >
-          <span className="section-label">The Problem</span>
+          <h2 className="section-label">The Problem</h2>
         </motion.div>
 
         {/* Problem cards — minimal */}

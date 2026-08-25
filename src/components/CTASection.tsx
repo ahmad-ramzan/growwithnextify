@@ -6,8 +6,11 @@ import { Phone } from "lucide-react";
 export default function CTASection() {
   return (
     <section
-      id="cta"
-      className="relative py-24 px-6 bg-white"
+      id="contact"
+      className="relative py-20 px-6 overflow-hidden"
+      data-avatar-section
+      data-avatar-message="Ready to scale your business? Let's talk!"
+      data-avatar-side="right"
     >
       <div className="max-w-3xl mx-auto text-center">
         {/* Heading */}

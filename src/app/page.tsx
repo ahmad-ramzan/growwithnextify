@@ -6,6 +6,7 @@ import ReviewsSection from "@/components/ReviewsSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import AvatarGuide from "@/components/AvatarGuide";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <CTASection />
       </main>
       <Footer />
+      <AvatarGuide />
     </>
   );
 }

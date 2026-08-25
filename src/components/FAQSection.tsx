@@ -66,7 +66,13 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
 
 export default function FAQSection() {
   return (
-    <section id="faq" className="relative py-16 px-6 bg-white border-t border-gray-100">
+    <section 
+      id="faq" 
+      className="relative py-16 px-6 bg-white border-t border-gray-100"
+      data-avatar-section
+      data-avatar-message="Got questions? We have answers."
+      data-avatar-side="right"
+    >
       <div className="max-w-3xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
