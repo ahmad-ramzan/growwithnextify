@@ -4,10 +4,18 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  const getLinkClass = (path: string) => 
+    `text-sm link-hover transition-colors ${pathname === path ? "text-[var(--brand-primary)] font-bold" : "text-gray-600 font-medium"}`;
+
+  const getMobileLinkClass = (path: string) => 
+    `link-hover transition-colors ${pathname === path ? "text-[var(--brand-primary)] font-bold" : "text-gray-900 font-medium"}`;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -27,11 +35,11 @@ export default function Navbar() {
 
         {/* Centered links — absolute so they're dead center regardless of logo/CTA width */}
         <ul className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-          <li><Link href="/" className="text-sm font-medium text-gray-600 link-hover">Home</Link></li>
-          <li><Link href="/services" className="text-sm font-medium text-gray-600 link-hover">Services</Link></li>
-          <li><Link href="/case-studies" className="text-sm font-medium text-gray-600 link-hover">Case Studies</Link></li>
-          <li><Link href="/offers" className="text-sm font-medium text-gray-600 link-hover">Offers</Link></li>
-          <li><Link href="/blog" className="text-sm font-medium text-gray-600 link-hover">Blog</Link></li>
+          <li><Link href="/" className={getLinkClass("/")}>Home</Link></li>
+          <li><Link href="/services" className={getLinkClass("/services")}>Services</Link></li>
+          <li><Link href="/case-studies" className={getLinkClass("/case-studies")}>Case Studies</Link></li>
+          <li><Link href="/offers" className={getLinkClass("/offers")}>Offers</Link></li>
+          <li><Link href="/blog" className={getLinkClass("/blog")}>Blog</Link></li>
         </ul>
 
         <div className="hidden md:flex items-center gap-4">
@@ -50,11 +58,11 @@ export default function Navbar() {
 
       {open && (
         <div className="md:hidden bg-white border-t border-gray-100 px-6 py-6 flex flex-col gap-4">
-          <Link href="/" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Home</Link>
-          <Link href="/services" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Services</Link>
-          <Link href="/case-studies" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Case Studies</Link>
-          <Link href="/offers" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Offers</Link>
-          <Link href="/blog" onClick={() => setOpen(false)} className="text-gray-900 font-medium link-hover">Blog</Link>
+          <Link href="/" onClick={() => setOpen(false)} className={getMobileLinkClass("/")}>Home</Link>
+          <Link href="/services" onClick={() => setOpen(false)} className={getMobileLinkClass("/services")}>Services</Link>
+          <Link href="/case-studies" onClick={() => setOpen(false)} className={getMobileLinkClass("/case-studies")}>Case Studies</Link>
+          <Link href="/offers" onClick={() => setOpen(false)} className={getMobileLinkClass("/offers")}>Offers</Link>
+          <Link href="/blog" onClick={() => setOpen(false)} className={getMobileLinkClass("/blog")}>Blog</Link>
           <Link
             href="/#contact"
             onClick={() => setOpen(false)}
