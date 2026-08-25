@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+
 const LinkedInIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8 19H5V8h3v11zM6.5 6.73c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.76-1.75 1.76zM20 19h-3v-5.6c0-3.37-4-3.12-4 0V19h-3V8h3v1.76c1.4-2.58 7-2.77 7 2.47V19z" />
@@ -14,7 +15,20 @@ const InstagramIcon = () => (
 );
 
 const footerLinks = {
-  Services: ["SEO Optimization", "AEO / AI Search", "Performance Marketing", "Competitor Analysis"],
+  Services: [
+    { name: "Web App Development", href: "/services" },
+    { name: "Mobile App Development", href: "/services" },
+    { name: "Backend & API", href: "/services" },
+    { name: "AI Automation", href: "/services" },
+    { name: "SEO Services", href: "/services" },
+  ],
+  Company: [
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "Offers", href: "/offers" },
+    { name: "Blog", href: "/blog" },
+  ]
 };
 
 const contact = [
@@ -45,74 +59,81 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-[#050b14] overflow-hidden border-t border-[#13233a]">
-      {/* Subtle Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[400px] bg-[var(--brand-primary)] opacity-10 blur-[140px] pointer-events-none rounded-full" />
+    <footer className="relative bg-[#0b1120] overflow-hidden">
       
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-24 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-20 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
           
           {/* Brand & CTA Column */}
-          <div className="lg:col-span-4 flex flex-col items-start">
-            <Link href="/" className="inline-block mb-8 transition-transform hover:scale-105 duration-300">
+          <div className="lg:col-span-5 flex flex-col items-start pr-8">
+            <Link href="/" className="inline-block mb-6 transition-transform hover:opacity-80 duration-300">
               <Image 
                 src="/logo.png" 
                 alt="GrowWithNextify" 
                 width={200}
                 height={80}
-                className="h-20 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity" 
+                className="h-14 w-auto object-contain brightness-0 invert" 
               />
             </Link>
-            <p className="text-[#8c9fba] text-[15px] leading-relaxed mb-8 max-w-sm font-light">
-              We engineer scalable growth through SEO, AI Search Optimization, and data-driven performance marketing. Your dedicated partner for modern digital dominance.
+            <p className="text-[#8b9bb4] text-[15px] leading-relaxed mb-8 font-light">
+              We build software, automate workflows and create digital experiences that help businesses grow. A practical technology partner for growing businesses.
             </p>
             <a 
               href="https://calendly.com/sal-growwithnextify/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white/[0.03] hover:bg-[var(--brand-primary)] border border-white/10 hover:border-[var(--brand-primary)] text-white text-sm font-medium transition-all duration-300 group shadow-lg"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-green-600 hover:bg-green-700 text-white text-[15px] font-medium transition-colors"
             >
-              Start Your Growth Journey
-              <ArrowRight size={16} className="text-[#8c9fba] group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
+              Start Your Project 
+              <ArrowRight size={16} />
             </a>
           </div>
 
-          {/* Spacer */}
-          <div className="hidden lg:block lg:col-span-1"></div>
-
           {/* Services Column */}
-          <div className="lg:col-span-2 pt-2">
-            <h4 className="text-white font-semibold mb-7 text-[15px] tracking-wide">Services</h4>
-            <ul className="flex flex-col gap-4.5">
+          <div className="lg:col-span-2">
+            <h4 className="text-white font-bold mb-6 text-[16px]">Services</h4>
+            <ul className="flex flex-col gap-4">
               {footerLinks.Services.map((l) => (
-                <li key={l}>
-                  <a href="#" className="text-[15px] text-[#8c9fba] hover:text-white transition-colors duration-200 font-light flex items-center gap-2 group">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-primary)] opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <span className="group-hover:translate-x-1 transition-transform duration-200">{l}</span>
-                  </a>
+                <li key={l.name}>
+                  <Link href={l.href} className="text-[15px] text-[#8b9bb4] hover:text-green-400 transition-colors font-light">
+                    {l.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company Column */}
+          <div className="lg:col-span-2">
+            <h4 className="text-white font-bold mb-6 text-[16px]">Company</h4>
+            <ul className="flex flex-col gap-4">
+              {footerLinks.Company.map((l) => (
+                <li key={l.name}>
+                  <Link href={l.href} className="text-[15px] text-[#8b9bb4] hover:text-green-400 transition-colors font-light">
+                    {l.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Contact Column */}
-          <div className="lg:col-span-3 pt-2">
-            <h4 className="text-white font-semibold mb-7 text-[15px] tracking-wide">Contact</h4>
-            <ul className="flex flex-col gap-5">
+          <div className="lg:col-span-3">
+            <h4 className="text-white font-bold mb-6 text-[16px]">Contact</h4>
+            <ul className="flex flex-col gap-5 mb-8">
               {contact.map((c) => (
                 <li key={c.text}>
-                  <a href={c.href} className="flex items-start gap-3.5 text-[15px] text-[#8c9fba] hover:text-white transition-colors duration-200 group font-light">
-                    <span className="mt-0.5 text-[var(--brand-primary)] opacity-80 group-hover:opacity-100 transition-opacity bg-[var(--brand-primary)]/10 p-1.5 rounded-md">{c.icon}</span>
-                    <span className="leading-relaxed">{c.text}</span>
+                  <a href={c.href} className="flex items-start gap-4 text-[15px] text-[#8b9bb4] hover:text-green-400 transition-colors font-light">
+                    <span className="flex-shrink-0 mt-0.5 w-8 h-8 rounded-full bg-green-600/10 text-green-500 flex items-center justify-center">
+                      {c.icon}
+                    </span>
+                    <span className="leading-relaxed pt-1">{c.text}</span>
                   </a>
                 </li>
               ))}
             </ul>
-          </div>
 
-          {/* Socials Column */}
-          <div className="lg:col-span-2 pt-2">
-            <h4 className="text-white font-semibold mb-7 text-[15px] tracking-wide">Connect</h4>
+            {/* Socials Row */}
             <div className="flex flex-wrap gap-3">
               {socials.map((s) => (
                 <a
@@ -121,7 +142,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="w-11 h-11 rounded-full bg-white/[0.03] border border-white/5 flex items-center justify-center text-[#8c9fba] hover:bg-[var(--brand-primary)] hover:border-[var(--brand-primary)] hover:text-white hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-sm"
+                  className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#8b9bb4] hover:bg-green-600 hover:text-white transition-colors shadow-sm"
                 >
                   {s.icon}
                 </a>
@@ -131,15 +152,15 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-5">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-[14px] text-[#6b7b93] font-light">
             &copy; {year} GrowWithNextify. All rights reserved.
           </p>
           <div className="flex items-center gap-8">
-            <Link href="/privacy-policy" className="text-[14px] text-[#6b7b93] hover:text-white transition-colors duration-200 font-light">
+            <Link href="/privacy-policy" className="text-[14px] text-[#6b7b93] hover:text-white transition-colors font-light">
               Privacy Policy
             </Link>
-            <Link href="/terms-of-service" className="text-[14px] text-[#6b7b93] hover:text-white transition-colors duration-200 font-light">
+            <Link href="/terms-of-service" className="text-[14px] text-[#6b7b93] hover:text-white transition-colors font-light">
               Terms of Service
             </Link>
           </div>
