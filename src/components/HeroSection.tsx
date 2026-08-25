@@ -1,11 +1,8 @@
 import {
-  ArrowUpRight,
-  Search,
   Globe,
   FileText,
   BarChart2,
   Headphones,
-  Share2,
   Bot,
   Phone,
   ChevronRight,
@@ -21,13 +18,10 @@ export default function HeroSection() {
     { name: "App Development", icon: Smartphone },
     { name: "Marketing Services", icon: Megaphone },
     { name: "E-Commerce", icon: ShoppingCart },
-    { name: "Outbound", icon: ArrowUpRight },
-    { name: "Inbound", icon: Search },
     { name: "SEO · AEO · GEO", icon: Globe },
     { name: "Content Automation", icon: FileText },
     { name: "Ads", icon: BarChart2 },
     { name: "Customer Support", icon: Headphones },
-    { name: "Back Office", icon: Share2 },
     { name: "AI Agents", icon: Bot },
   ];
 
