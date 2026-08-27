@@ -1,8 +1,10 @@
-import React from "react";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { services } from "@/data/services";
 
 export default function ServicesSection() {
   return (
-    <section 
+    <section
       className="relative py-24 px-6 bg-gray-50 border-y border-gray-100"
       data-avatar-section
       data-avatar-message="Here is a breakdown of exactly what we can do for you."
@@ -10,91 +12,92 @@ export default function ServicesSection() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">Our Core Services</h2>
-          <p className="text-gray-500 mt-4 max-w-2xl mx-auto">End-to-end solutions to build your product, rank in search, and scale your revenue.</p>
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">
+            What We Do
+          </h2>
+          <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
+            End-to-end solutions to build your product, rank in search, and
+            scale your revenue. Choose what you need — or combine them all.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          
-          {/* Development Services */}
-          <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition-shadow group">
-            <div className="mb-6">
-              <div className="inline-block px-4 py-1.5 bg-[#4472C4]/10 text-[#2D57A8] rounded-full text-xs font-bold border border-[#4472C4]/20 shadow-sm">Development</div>
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[var(--brand-primary)] transition-colors">Custom Web & App Development</h3>
-            <p className="text-gray-600 mb-8 leading-relaxed flex-grow">
-              We build highly performant, scalable, and secure web applications using modern frameworks like Next.js and React.
-            </p>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm font-medium text-gray-700">
-                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#4472C4] shrink-0" /> 
-                <span>Full-Stack Next.js Applications</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm font-medium text-gray-700">
-                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#4472C4] shrink-0" /> 
-                <span>Custom API & Backend Development</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm font-medium text-gray-700">
-                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#4472C4] shrink-0" /> 
-                <span>E-commerce Solutions & Migrations</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm font-medium text-gray-700">
-                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#4472C4] shrink-0" /> 
-                <span>UI/UX Design & Prototyping</span>
-              </li>
-            </ul>
-          </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <div
+                key={service.title}
+                className="bg-white p-7 rounded-3xl shadow-sm border border-gray-100 flex flex-col hover:shadow-lg transition-all duration-300 group relative overflow-hidden"
+                data-avatar-section
+                data-avatar-message={service.avatarMessage}
+                data-avatar-side="left"
+              >
+                {/* Colored top accent line */}
+                <div
+                  className="absolute top-0 left-0 right-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ backgroundColor: service.accent }}
+                />
 
-          {/* SEO & AEO Services */}
-          <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition-shadow group">
-            <div className="mb-6">
-              <div className="inline-block px-4 py-1.5 bg-[#196d24]/10 text-[#125018] rounded-full text-xs font-bold border border-[#196d24]/20 shadow-sm">Marketing</div>
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[var(--brand-primary)] transition-colors">Search & AI Optimization</h3>
-            <p className="text-gray-600 mb-8 leading-relaxed flex-grow">
-              Rank higher on Google and become the cited authority in AI Overviews (ChatGPT, Claude) to secure your digital footprint.
-            </p>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm font-medium text-gray-700">
-                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#196d24] shrink-0" /> 
-                <span>Technical & On-Page SEO Audits</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm font-medium text-gray-700">
-                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#196d24] shrink-0" /> 
-                <span>Content Strategy & Link Building</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm font-medium text-gray-700">
-                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#196d24] shrink-0" /> 
-                <span>AI Overview (AEO) Placements</span>
-              </li>
-            </ul>
-          </div>
+                {/* Icon */}
+                <div
+                  className="w-12 h-12 rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
+                  style={{
+                    backgroundColor: service.accentBg,
+                    color: service.accent,
+                    border: `1px solid ${service.accentBorder}`,
+                  }}
+                >
+                  <Icon size={22} />
+                </div>
 
-          {/* Paid Ads Section */}
-          <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition-shadow group">
-            <div className="mb-6">
-              <div className="inline-block px-4 py-1.5 bg-[#f59e0b]/10 text-[#b45309] rounded-full text-xs font-bold border border-[#f59e0b]/20 shadow-sm">Marketing</div>
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[var(--brand-primary)] transition-colors">Performance Marketing</h3>
-            <p className="text-gray-600 mb-8 leading-relaxed flex-grow">
-              Turn clicks into qualified clients with highly targeted ad campaigns. We manage Search, Display, and Social Media advertising.
-            </p>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm font-medium text-gray-700">
-                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#f59e0b] shrink-0" /> 
-                <span>Google Ads (Search & Display)</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm font-medium text-gray-700">
-                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#f59e0b] shrink-0" /> 
-                <span>Social Media Retargeting</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm font-medium text-gray-700">
-                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#f59e0b] shrink-0" /> 
-                <span>Landing Page Conversion Optimization</span>
-              </li>
-            </ul>
-          </div>
+                {/* Title */}
+                <h3
+                  className="text-lg font-bold text-gray-900 mb-3 transition-colors duration-300"
+                  style={{
+                    // CSS custom property for hover color
+                  }}
+                >
+                  <span className="group-hover:text-[var(--brand-primary)] transition-colors">
+                    {service.title}
+                  </span>
+                </h3>
 
+                {/* Description */}
+                <p className="text-gray-600 text-sm leading-relaxed mb-5 flex-grow">
+                  {service.description}
+                </p>
+
+                {/* Features */}
+                <ul className="space-y-2.5 mb-6">
+                  {service.features.flatMap(f => f.items).slice(0, 4).map((feature, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-2.5 text-sm text-gray-700"
+                    >
+                      <div
+                        className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                        style={{ backgroundColor: service.accent }}
+                      />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA */}
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="inline-flex items-center gap-2 text-sm font-bold mt-auto pt-5 border-t border-gray-100 transition-colors duration-300"
+                  style={{ color: service.accent }}
+                >
+                  View Details
+                  <ArrowRight
+                    size={14}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
+                </Link>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

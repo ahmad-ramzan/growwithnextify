@@ -16,11 +16,13 @@ const InstagramIcon = () => (
 
 const footerLinks = {
   Services: [
-    { name: "Web App Development", href: "/services" },
+    { name: "Website Development", href: "/services" },
     { name: "Mobile App Development", href: "/services" },
-    { name: "Backend & API", href: "/services" },
+    { name: "SEO & AEO", href: "/services" },
     { name: "AI Automation", href: "/services" },
-    { name: "SEO Services", href: "/services" },
+    { name: "Digital Marketing", href: "/services" },
+    { name: "Blog & Content Writing", href: "/services" },
+    { name: "Video Editing", href: "/services" },
   ],
   Company: [
     { name: "Home", href: "/" },
