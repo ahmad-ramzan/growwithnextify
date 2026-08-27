@@ -28,6 +28,7 @@ const footerLinks = {
     { name: "Case Studies", href: "/case-studies" },
     { name: "Offers", href: "/offers" },
     { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
   ]
 };
 

@@ -40,15 +40,18 @@ export default function Navbar() {
           <li><Link href="/case-studies" className={getLinkClass("/case-studies")}>Case Studies</Link></li>
           <li><Link href="/offers" className={getLinkClass("/offers")}>Offers</Link></li>
           <li><Link href="/blog" className={getLinkClass("/blog")}>Blog</Link></li>
+          <li><Link href="/contact" className={getLinkClass("/contact")}>Contact</Link></li>
         </ul>
 
         <div className="hidden md:flex items-center gap-4">
-          <Link
-            href="/#contact"
+          <a
+            href="https://calendly.com/sal-growwithnextify/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary"
           >
-            Contact
-          </Link>
+            Book a Call
+          </a>
         </div>
 
         <button onClick={() => setOpen(!open)} className="md:hidden text-gray-600 link-hover">
@@ -63,13 +66,16 @@ export default function Navbar() {
           <Link href="/case-studies" onClick={() => setOpen(false)} className={getMobileLinkClass("/case-studies")}>Case Studies</Link>
           <Link href="/offers" onClick={() => setOpen(false)} className={getMobileLinkClass("/offers")}>Offers</Link>
           <Link href="/blog" onClick={() => setOpen(false)} className={getMobileLinkClass("/blog")}>Blog</Link>
-          <Link
-            href="/#contact"
+          <Link href="/contact" onClick={() => setOpen(false)} className={getMobileLinkClass("/contact")}>Contact</Link>
+          <a
+            href="https://calendly.com/sal-growwithnextify/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="btn-primary mt-4 justify-center text-center"
           >
-            Contact
-          </Link>
+            Book a Call
+          </a>
         </div>
       )}
     </header>

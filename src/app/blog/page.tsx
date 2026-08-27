@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import AvatarGuide from "@/components/AvatarGuide";
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ const blogPosts = [
     excerpt: "Discover how migrating to a headless Next.js architecture can shave seconds off your load time and dramatically improve your conversion rate.",
     category: "Web Development",
     date: "August 24, 2026",
-    gradient: "from-blue-500 to-cyan-400"
+    image: "/blog/nextjs-ecommerce.jpg",
   },
   {
     id: 2,
@@ -26,7 +27,7 @@ const blogPosts = [
     excerpt: "Traditional SEO gets you ranked on Google. AEO gets you recommended by ChatGPT and Claude. Here is how to dominate both.",
     category: "SEO / AEO",
     date: "August 20, 2026",
-    gradient: "from-green-500 to-emerald-400"
+    image: "/blog/aeo-guide.jpg",
   },
   {
     id: 3,
@@ -34,7 +35,7 @@ const blogPosts = [
     excerpt: "Most campaigns bleed budget through poor targeting and unoptimized landing pages. Learn how to plug the leaks and maximize your ROAS.",
     category: "Paid Ads",
     date: "August 15, 2026",
-    gradient: "from-orange-500 to-amber-400"
+    image: "/blog/google-ads.jpg",
   },
   {
     id: 4,
@@ -42,7 +43,7 @@ const blogPosts = [
     excerpt: "A teardown of the specific psychological triggers, UX patterns, and copywriting techniques that turn casual visitors into enterprise leads.",
     category: "Web Development",
     date: "August 10, 2026",
-    gradient: "from-indigo-500 to-purple-400"
+    image: "/blog/saas-landing.jpg",
   },
   {
     id: 5,
@@ -50,7 +51,7 @@ const blogPosts = [
     excerpt: "For local service businesses, the Google Map Pack is everything. Learn the exact citation and review strategy we use to get clients to #1.",
     category: "SEO / AEO",
     date: "August 5, 2026",
-    gradient: "from-rose-500 to-pink-400"
+    image: "/blog/local-seo.jpg",
   },
   {
     id: 6,
@@ -58,7 +59,7 @@ const blogPosts = [
     excerpt: "Why the old agency model is broken, and why performance-driven, tech-enabled growth partners are the only way forward for serious brands.",
     category: "Business Growth",
     date: "August 1, 2026",
-    gradient: "from-gray-700 to-gray-900"
+    image: "/blog/agency-future.jpg",
   }
 ];
 
@@ -114,12 +115,16 @@ export default function BlogPage() {
                 data-avatar-message={`"${post.title}" is a great read!`}
                 data-avatar-side="left"
               >
-                {/* Thumbnail Placeholder */}
-                <div className={`w-full aspect-video bg-gradient-to-br ${post.gradient} relative overflow-hidden`}>
-                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
-                   {/* Abstract geometric shapes for visual interest */}
-                   <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-white/20 rounded-full blur-2xl" />
-                   <div className="absolute top-4 left-4 w-16 h-16 bg-black/10 rounded-full blur-xl" />
+                {/* Blog Thumbnail */}
+                <div className="w-full aspect-video relative overflow-hidden">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
                 
                 {/* Content */}
