@@ -29,9 +29,9 @@ const contactCards = [
   {
     icon: MapPin,
     title: "Visit Us",
-    detail: "Laal Building, Frij Al Murar, Deira, Dubai, UAE",
-    href: "https://www.google.com/maps/search/?api=1&query=Laal+Building+Frij+Al+Murar+Deira+Dubai+UAE",
-    description: "Our Dubai headquarters",
+    detail: "Johar Town, Lahore, Punjab, Pakistan",
+    href: "https://www.google.com/maps/search/?api=1&query=Johar+Town+Lahore+Pakistan",
+    description: "Our headquarters",
   },
 ];
 
@@ -162,7 +162,7 @@ export default function ContactContent() {
             <div className="rounded-3xl overflow-hidden border border-gray-100 shadow-sm aspect-[4/3]">
               <iframe
                 title="GrowWithNextify Office Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.5!2d55.3!3d25.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDE2JzEyLjAiTiA1NcKwMTgnMDAuMCJF!5e0!3m2!1sen!2sae!4v1"
+                src="https://maps.google.com/maps?q=Johar%20Town,%20Lahore,%20Pakistan&t=&z=14&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
