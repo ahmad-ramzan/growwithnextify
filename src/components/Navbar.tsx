@@ -30,7 +30,7 @@ export default function Navbar() {
 
       <nav className="relative max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 shrink-0">
-          <Image src="/logo.png" alt="Company Logo" width={224} height={112} priority className="h-16 md:h-28 w-auto object-contain transition-all duration-300" />
+          <Image src="/logo-new.png" alt="Company Logo" width={224} height={112} priority className="h-16 md:h-28 w-auto object-contain transition-all duration-300" />
         </Link>
 
         {/* Centered links — absolute so they're dead center regardless of logo/CTA width */}

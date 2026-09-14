@@ -70,12 +70,12 @@ export default function Footer() {
           {/* Brand & CTA Column */}
           <div className="lg:col-span-5 flex flex-col items-start pr-8">
             <Link href="/" className="inline-block mb-6 transition-transform hover:opacity-80 duration-300">
-              <Image 
-                src="/logo.png" 
-                alt="GrowWithNextify" 
+              <Image
+                src="/logo-new.png"
+                alt="GrowWithNextify"
                 width={200}
                 height={80}
-                className="h-14 w-auto object-contain brightness-0 invert" 
+                className="h-14 w-auto object-contain brightness-0 invert"
               />
             </Link>
             <p className="text-[#8b9bb4] text-[15px] leading-relaxed mb-8 font-light">
