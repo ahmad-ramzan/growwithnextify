@@ -18,9 +18,9 @@ export default function CTASection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight"
+          className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] leading-tight tracking-tight"
         >
-          Ready to Grow Your Business?
+          Ready to Grow Your <span className="gradient-text">Business</span>?
         </motion.h2>
 
         {/* Subhead */}
@@ -29,7 +29,7 @@ export default function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="mt-6 text-lg leading-relaxed max-w-2xl mx-auto text-gray-500 font-light"
+          className="mt-6 text-lg leading-relaxed max-w-2xl mx-auto text-[var(--text-secondary)] font-light"
         >
           Most clients keep us on after launch as their ongoing AI partner. Monthly strategy sessions, evolving systems, and continued support as the business grows.
         </motion.p>

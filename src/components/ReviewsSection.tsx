@@ -50,9 +50,9 @@ export default function ReviewsSection() {
   const loop = [...reviews, ...reviews];
 
   return (
-    <section 
-      id="reviews" 
-      className="relative py-12 bg-[#fafcff] overflow-hidden"
+    <section
+      id="reviews"
+      className="relative py-12 bg-[var(--bg-tertiary)] overflow-hidden"
       data-avatar-section
       data-avatar-message="Don't just take our word for it—see what our clients say."
       data-avatar-side="right"
@@ -85,7 +85,7 @@ export default function ReviewsSection() {
           {loop.map((r, i) => (
             <div
               key={`${r.name}-${i}`}
-              className="bg-white p-8 rounded-2xl flex flex-col gap-5 w-[380px] shrink-0 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-white p-8 rounded-lg flex flex-col gap-5 w-[380px] shrink-0 border border-[var(--border-light)] shadow-sm hover:shadow-lg hover:border-[var(--brand-green)] transition-all duration-300"
             >
               <div className="flex justify-between items-start">
                 <div className="flex gap-1 text-[#f59e0b]">
@@ -93,22 +93,22 @@ export default function ReviewsSection() {
                     <Star key={i} size={16} fill="currentColor" />
                   ))}
                 </div>
-                <Quote size={32} className="text-[var(--brand-primary)] opacity-10" />
+                <Quote size={32} className="text-[var(--brand-green)] opacity-10" />
               </div>
 
               {/* Review text */}
-              <p className="text-[#4b5563] text-[15px] leading-relaxed flex-1 italic">
+              <p className="text-[var(--text-secondary)] text-[15px] leading-relaxed flex-1 italic">
                 "{r.text}"
               </p>
 
               {/* Author row */}
-              <div className="flex items-center gap-4 pt-5 border-t border-gray-100 mt-2">
-                <div className="w-11 h-11 rounded-full flex items-center justify-center font-bold text-white bg-[var(--brand-secondary)] shadow-inner">
+              <div className="flex items-center gap-4 pt-5 border-t border-[var(--border-light)] mt-2">
+                <div className="w-11 h-11 rounded-full flex items-center justify-center font-bold text-white bg-[var(--brand-green)] shadow-inner">
                   {r.avatar}
                 </div>
                 <div>
-                  <p className="text-gray-900 font-bold text-sm">{r.name}</p>
-                  <p className="text-gray-500 text-xs mt-0.5">
+                  <p className="text-[var(--text-primary)] font-bold text-sm">{r.name}</p>
+                  <p className="text-[var(--text-muted)] text-xs mt-0.5">
                     {r.company ? `${r.role}, ${r.company}` : r.role}
                   </p>
                 </div>

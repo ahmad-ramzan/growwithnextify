@@ -1,20 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #fafafa;
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --text-muted: #9ca3af;
-  --border: #e5e7eb;
+  /* Primary Colors - From Logo */
+  --brand-green: #1d9c39;
+  --brand-green-light: #2db855;
+  --brand-green-dark: #167a2c;
+  --brand-green-pale: #f0f9f5;
 
-  /* Brand Colors (From Logo) */
+  --brand-blue: #1e5d99;
+  --brand-blue-light: #2970b8;
+  --brand-blue-dark: #164673;
+  --brand-blue-pale: #f0f5fb;
+
+  /* Brand Colors (For Compatibility) */
   --brand-primary: #1d9c39;
-  /* Growth Green */
   --brand-primary-alt: #167a2c;
   --brand-secondary: #1e5d99;
-  /* Professional Blue */
   --brand-secondary-alt: #164673;
+
+  /* Background & Neutral */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafb;
+  --bg-tertiary: #f0f5fb;
+  --text-primary: #0f1419;
+  --text-secondary: #3a4555;
+  --text-muted: #8a92a0;
+  --border: #e0e6f0;
+  --border-light: #ecf0f6;
+
+  /* Accents */
+  --accent-success: #1d9c39;
+  --accent-warning: #f59e0b;
+  --accent-error: #ef4444;
+  --accent-info: #1e5d99;
 }
 
 @theme inline {
@@ -44,47 +62,61 @@ body {
   color: #fff;
 }
 
-/* Primary Button */
+/* Primary Button - Green */
 .btn-primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 12px 18px;
-  border-radius: 999px;
+  padding: 12px 24px;
+  border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
   color: #ffffff;
-  background: var(--brand-primary);
-  transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+  background: var(--brand-green);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
-  box-shadow: 0 4px 12px rgba(29, 156, 57, 0.3);
+  box-shadow: 0 4px 14px rgba(29, 156, 57, 0.25);
+  cursor: pointer;
 }
 
 .btn-primary:hover {
-  background: var(--brand-primary-alt);
+  background: var(--brand-green-light);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(29, 156, 57, 0.4);
+  box-shadow: 0 8px 20px rgba(29, 156, 57, 0.35);
 }
 
-/* Secondary Button - Deep Professional Blue */
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(29, 156, 57, 0.25);
+}
+
+/* Secondary Button - Blue Outline */
 .btn-ghost {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 12px 18px;
-  border-radius: 999px;
+  padding: 12px 24px;
+  border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--brand-secondary);
-  background: rgba(30, 93, 153, 0.05);
-  border: 1.5px solid rgba(30, 93, 153, 0.2);
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  color: var(--brand-blue);
+  background: var(--bg-tertiary);
+  border: 2px solid var(--brand-blue);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .btn-ghost:hover {
-  background: rgba(30, 93, 153, 0.1);
-  color: var(--brand-secondary-alt);
-  border-color: rgba(30, 93, 153, 0.4);
+  background: var(--brand-blue);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(30, 93, 153, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn-ghost:active {
+  transform: translateY(0);
 }
 
 /* Solid Accents using Secondary Color */
@@ -99,37 +131,110 @@ body {
 /* Cards & Accents */
 .card {
   background: var(--bg-primary);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-light);
   border-radius: 12px;
-  transition: transform 0.2s ease, border-color 0.2s, box-shadow 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover {
-  border-color: rgba(30, 93, 153, 0.3);
-  box-shadow: 0 8px 24px rgba(30, 93, 153, 0.08);
-  transform: translateY(-2px);
+  border-color: var(--brand-blue);
+  box-shadow: 0 12px 32px rgba(30, 93, 153, 0.12);
+  transform: translateY(-4px);
 }
 
 .section-label {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 14px;
-  border-radius: 999px;
+  padding: 8px 16px;
+  border-radius: 8px;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: rgba(29, 156, 57, 0.1);
-  color: var(--brand-primary);
-  border: 1px solid rgba(29, 156, 57, 0.2);
+  background: var(--brand-green-pale);
+  color: var(--brand-green-dark);
+  border: 1px solid var(--brand-green);
 }
 
 /* Hover Links */
 .link-hover {
-  transition: color 0.2s;
+  transition: color 0.3s ease;
+  color: var(--text-secondary);
 }
 
 .link-hover:hover {
-  color: var(--brand-primary);
+  color: var(--brand-green);
+}
+
+/* Professional Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* Accent Underline */
+.accent-line {
+  position: relative;
+  display: inline-block;
+}
+
+.accent-line::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-green), var(--brand-blue));
+  border-radius: 2px;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--brand-green), var(--brand-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+/* Badge Styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--brand-green-pale);
+  color: var(--brand-green-dark);
+}
+
+.badge-blue {
+  background: var(--brand-blue-pale);
+  color: var(--brand-blue-dark);
+}
+
+/* Input Focus States */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--brand-blue) !important;
+  box-shadow: 0 0 0 3px rgba(30, 93, 153, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Divider */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  opacity: 0.6;
+}
+
+/* Professional Shadow */
+.shadow-elevated {
+  box-shadow: 0 10px 40px rgba(15, 20, 25, 0.08);
 }

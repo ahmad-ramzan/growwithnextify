@@ -38,14 +38,14 @@ export default function HeroSection() {
 
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
         {/* Top Badge */}
-        <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--border)] bg-white mb-4 shadow-sm">
-          <div className="w-2 h-2 rounded-full bg-[var(--brand-primary)]"></div>
-          <span className="text-xs text-[var(--text-secondary)] font-medium">Trusted by 20+ companies worldwide</span>
+        <div className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[var(--brand-green)] bg-[var(--brand-green-pale)] mb-6 shadow-sm">
+          <div className="w-2 h-2 rounded-full bg-[var(--brand-green)]"></div>
+          <span className="text-xs text-[var(--brand-green-dark)] font-semibold">Trusted by 20+ companies worldwide</span>
         </div>
 
         {/* Heading */}
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] leading-tight mb-6 tracking-tight">
-          Building Solutions That Drive Business Growth
+          Building Solutions That Drive Business <span className="gradient-text">Growth</span>
         </h1>
 
         {/* Subheading */}
@@ -54,15 +54,15 @@ export default function HeroSection() {
         </p>
 
         {/* Pills */}
-        <div className="flex flex-wrap justify-center gap-3 max-w-4xl mb-6">
+        <div className="flex flex-wrap justify-center gap-3 max-w-4xl mb-8">
           {pills.map((pill, index) => {
             const Icon = pill.icon;
             return (
               <div
                 key={index}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[var(--border)] bg-white shadow-sm text-xs font-medium text-[var(--text-secondary)] hover:border-gray-300 transition-colors"
+                className="flex items-center gap-2 px-5 py-3 rounded-lg border border-[var(--border-light)] bg-[var(--bg-secondary)] shadow-sm text-xs font-medium text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:border-[var(--brand-blue)] transition-all duration-300"
               >
-                <Icon size={16} className="text-[var(--brand-secondary)] opacity-70" />
+                <Icon size={16} className="text-[var(--brand-blue)]" />
                 {pill.name}
               </div>
             );
